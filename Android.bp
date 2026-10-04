@@ -4,12 +4,14 @@
 
 soong_namespace {
     imports: [
+        "device/qcom/common/vendor/telephony",
         "hardware/qcom/wlan/qcwcn",
         "hardware/xiaomi",
         "vendor/qcom/common/vendor/adreno/r",
         "vendor/qcom/common/vendor/display/5.4",
         "vendor/qcom/common/vendor/gps-legacy",
         "vendor/qcom/common/vendor/media/5.4",
+        "vendor/qcom/common/vendor/perf",
     ],
 }
 
@@ -16458,6 +16460,30 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtinyxml",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtinyxml.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],

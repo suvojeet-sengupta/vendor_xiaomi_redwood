@@ -859,6 +859,7 @@ PRODUCT_PACKAGES += \
     libtfestriping \
     libthreadutils \
     libtime_genoff \
+    libtinyxml \
     libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
     libtrustedapploader \
