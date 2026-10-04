@@ -3009,30 +3009,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqrtr",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqrtr.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqtigef",
     owner: "xiaomi",
     strip: {
@@ -9174,7 +9150,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.0",
+    name: "com.qualcomm.qti.imscmservice@2.0_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9202,7 +9179,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.1",
+    name: "com.qualcomm.qti.imscmservice@2.1_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9213,7 +9191,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9231,7 +9209,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2",
+    name: "com.qualcomm.qti.imscmservice@2.2_vendor",
+    stem: "com.qualcomm.qti.imscmservice@2.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9242,8 +9221,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9317,7 +9296,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.0",
+    name: "com.qualcomm.qti.uceservice@2.0_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9345,7 +9325,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.1",
+    name: "com.qualcomm.qti.uceservice@2.1_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9356,7 +9337,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.1.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9374,7 +9355,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.2",
+    name: "com.qualcomm.qti.uceservice@2.2_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9385,8 +9367,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.2.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9404,7 +9386,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.3",
+    name: "com.qualcomm.qti.uceservice@2.3_vendor",
+    stem: "com.qualcomm.qti.uceservice@2.3",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -9415,9 +9398,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so",
             ],
             shared_libs: [
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -9446,7 +9429,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/deviceInfoServiceModuleNr.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
+                "vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor",
                 "libqcrilNrFramework",
                 "libqcrilNr",
                 "libqcrilNrLogger",
@@ -10187,8 +10170,8 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libqmi_common_so",
                 "libcneapiclient",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -10290,13 +10273,13 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libqmiservices",
                 "libqmi_encdec",
-                "com.qualcomm.qti.uceservice@2.0",
-                "com.qualcomm.qti.uceservice@2.1",
-                "com.qualcomm.qti.uceservice@2.2",
-                "com.qualcomm.qti.uceservice@2.3",
-                "com.qualcomm.qti.imscmservice@2.0",
-                "com.qualcomm.qti.imscmservice@2.1",
-                "com.qualcomm.qti.imscmservice@2.2",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.uceservice@2.2_vendor",
+                "com.qualcomm.qti.uceservice@2.3_vendor",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.2_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -10334,12 +10317,12 @@ cc_prebuilt_library_shared {
                 "libidl",
                 "libqti_vndfwk_detect",
                 "libandroid_net",
-                "vendor.qti.ims.callinfo@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.factory@1.1",
-                "vendor.qti.ims.callcapability@1.0",
+                "vendor.qti.ims.callinfo@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.factory@1.1_vendor",
+                "vendor.qti.ims.callcapability@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -12348,24 +12331,24 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libnl",
                 "libidl",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.hardware.data.lce@1.0",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.hardware.data.lce@1.0_vendor",
                 "libandroid_net",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.factory@2.3",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.latency@2.1",
-                "vendor.qti.hardware.mwqemadapter@1.0",
-                "vendor.qti.data.mwqem@1.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.factory@2.3_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.latency@2.1_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
                 "libwpa_client",
                 "libc++",
                 "libc",
@@ -12397,10 +12380,10 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "liblog",
                 "libhidlbase",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
                 "libandroid_net",
                 "libc++",
                 "libc",
@@ -15052,33 +15035,33 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
-                "vendor.qti.hardware.radio.ims@1.6",
-                "vendor.qti.hardware.radio.ims@1.7",
-                "vendor.qti.hardware.radio.am@1.0",
-                "vendor.qti.hardware.radio.qcrilhook@1.0",
-                "vendor.qti.hardware.radio.uim@1.0",
-                "vendor.qti.hardware.radio.uim@1.1",
-                "vendor.qti.hardware.radio.uim@1.2",
-                "vendor.qti.hardware.radio.uim_remote_server@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.1",
-                "vendor.qti.hardware.radio.uim_remote_client@1.2",
-                "vendor.qti.hardware.radio.lpa@1.0",
-                "vendor.qti.hardware.radio.lpa@1.1",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
-                "vendor.qti.hardware.radio.qtiradio@2.5",
-                "vendor.qti.hardware.radio.qtiradio@2.6",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
+                "vendor.qti.hardware.radio.ims@1.7_vendor",
+                "vendor.qti.hardware.radio.am@1.0_vendor",
+                "vendor.qti.hardware.radio.qcrilhook@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.1_vendor",
+                "vendor.qti.hardware.radio.uim@1.2_vendor",
+                "vendor.qti.hardware.radio.uim_remote_server@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.2_vendor",
+                "vendor.qti.hardware.radio.lpa@1.0_vendor",
+                "vendor.qti.hardware.radio.lpa@1.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.6_vendor",
                 "android.hardware.radio@1.0",
                 "android.hardware.radio.config@1.0",
                 "android.hardware.radio.config@1.1",
@@ -15136,9 +15119,9 @@ cc_prebuilt_library_shared {
                 "libdsi_netctrl",
                 "libqdp",
                 "liblqe",
-                "vendor.qti.hardware.data.iwlan@1.0",
-                "vendor.qti.hardware.data.connection@1.0",
-                "vendor.qti.hardware.data.connection@1.1",
+                "vendor.qti.hardware.data.iwlan@1.0_vendor",
+                "vendor.qti.hardware.data.connection@1.0_vendor",
+                "vendor.qti.hardware.data.connection@1.1_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -16951,11 +16934,11 @@ cc_prebuilt_library_shared {
                 "libcneoplookup",
                 "libandroid_net",
                 "libutils",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -16993,9 +16976,9 @@ cc_prebuilt_library_shared {
                 "libxml2",
                 "libandroid_net",
                 "libqti_vndfwk_detect",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libwpa_client",
                 "libc++",
                 "libc",
@@ -17459,7 +17442,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.0",
+    name: "vendor.qti.data.factory@2.0_vendor",
+    stem: "vendor.qti.data.factory@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17470,13 +17454,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -17494,7 +17478,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.1",
+    name: "vendor.qti.data.factory@2.1_vendor",
+    stem: "vendor.qti.data.factory@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17505,16 +17490,16 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -17532,7 +17517,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.2",
+    name: "vendor.qti.data.factory@2.2_vendor",
+    stem: "vendor.qti.data.factory@2.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17543,18 +17529,18 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.mwqem@1.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -17572,7 +17558,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@2.3",
+    name: "vendor.qti.data.factory@2.3_vendor",
+    stem: "vendor.qti.data.factory@2.3",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17583,20 +17570,20 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.data.factory@2.3.so",
             ],
             shared_libs: [
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.mwqem@1.0",
-                "vendor.qti.data.slm@1.0",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.lce@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0",
-                "vendor.qti.ims.rcsconfig@1.1",
-                "vendor.qti.latency@2.0",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.mwqem@1.0_vendor",
+                "vendor.qti.data.slm@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+                "vendor.qti.hardware.data.lce@1.0_vendor",
+                "vendor.qti.hardware.data.qmi@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@1.1_vendor",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -17614,7 +17601,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.mwqem@1.0",
+    name: "vendor.qti.data.mwqem@1.0_vendor",
+    stem: "vendor.qti.data.mwqem@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17642,7 +17630,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.slm@1.0",
+    name: "vendor.qti.data.slm@1.0_vendor",
+    stem: "vendor.qti.data.slm@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17924,7 +17913,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.api@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.api@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17935,7 +17925,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -17953,7 +17943,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.constants@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.constants@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17981,7 +17972,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.cne.internal.server@1.0",
+    name: "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+    stem: "vendor.qti.hardware.data.cne.internal.server@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -17992,7 +17984,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18010,7 +18002,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connection@1.0",
+    name: "vendor.qti.hardware.data.connection@1.0_vendor",
+    stem: "vendor.qti.hardware.data.connection@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18038,7 +18031,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.connection@1.1",
+    name: "vendor.qti.hardware.data.connection@1.1_vendor",
+    stem: "vendor.qti.hardware.data.connection@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18049,7 +18043,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.data.connection@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.data.connection@1.0",
+                "vendor.qti.hardware.data.connection@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18067,7 +18061,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.dynamicdds@1.0",
+    name: "vendor.qti.hardware.data.dynamicdds@1.0_vendor",
+    stem: "vendor.qti.hardware.data.dynamicdds@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18095,7 +18090,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.iwlan@1.0",
+    name: "vendor.qti.hardware.data.iwlan@1.0_vendor",
+    stem: "vendor.qti.hardware.data.iwlan@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18128,7 +18124,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.latency@1.0",
+    name: "vendor.qti.hardware.data.latency@1.0_vendor",
+    stem: "vendor.qti.hardware.data.latency@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18156,7 +18153,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.lce@1.0",
+    name: "vendor.qti.hardware.data.lce@1.0_vendor",
+    stem: "vendor.qti.hardware.data.lce@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18184,7 +18182,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.qmi@1.0",
+    name: "vendor.qti.hardware.data.qmi@1.0_vendor",
+    stem: "vendor.qti.hardware.data.qmi@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18212,35 +18211,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.mwqemadapter@1.0",
+    name: "vendor.qti.hardware.mwqemadapter@1.0_vendor",
+    stem: "vendor.qti.hardware.mwqemadapter@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18296,7 +18268,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.am@1.0",
+    name: "vendor.qti.hardware.radio.am@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.am@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18324,7 +18297,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.0",
+    name: "vendor.qti.hardware.radio.ims@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18352,7 +18326,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.1",
+    name: "vendor.qti.hardware.radio.ims@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18363,7 +18338,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18381,7 +18356,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.2",
+    name: "vendor.qti.hardware.radio.ims@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18392,8 +18368,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18411,7 +18387,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.3",
+    name: "vendor.qti.hardware.radio.ims@1.3_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.3",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18422,9 +18399,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18442,7 +18419,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.4",
+    name: "vendor.qti.hardware.radio.ims@1.4_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.4",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18453,10 +18431,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18474,7 +18452,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.5",
+    name: "vendor.qti.hardware.radio.ims@1.5_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.5",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18485,11 +18464,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18507,7 +18486,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.6",
+    name: "vendor.qti.hardware.radio.ims@1.6_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.6",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18518,12 +18498,12 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18541,7 +18521,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.ims@1.7",
+    name: "vendor.qti.hardware.radio.ims@1.7_vendor",
+    stem: "vendor.qti.hardware.radio.ims@1.7",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18552,13 +18533,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.ims@1.1",
-                "vendor.qti.hardware.radio.ims@1.2",
-                "vendor.qti.hardware.radio.ims@1.3",
-                "vendor.qti.hardware.radio.ims@1.4",
-                "vendor.qti.hardware.radio.ims@1.5",
-                "vendor.qti.hardware.radio.ims@1.6",
+                "vendor.qti.hardware.radio.ims@1.0_vendor",
+                "vendor.qti.hardware.radio.ims@1.1_vendor",
+                "vendor.qti.hardware.radio.ims@1.2_vendor",
+                "vendor.qti.hardware.radio.ims@1.3_vendor",
+                "vendor.qti.hardware.radio.ims@1.4_vendor",
+                "vendor.qti.hardware.radio.ims@1.5_vendor",
+                "vendor.qti.hardware.radio.ims@1.6_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18576,7 +18557,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
+    name: "vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.internal.deviceinfo@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18604,7 +18586,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.0",
+    name: "vendor.qti.hardware.radio.lpa@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.lpa@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18632,7 +18615,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.lpa@1.1",
+    name: "vendor.qti.hardware.radio.lpa@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.lpa@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18643,7 +18627,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.lpa@1.0",
+                "vendor.qti.hardware.radio.lpa@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18661,7 +18645,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qcrilhook@1.0",
+    name: "vendor.qti.hardware.radio.qcrilhook@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.qcrilhook@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18689,7 +18674,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@1.0",
+    name: "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18717,7 +18703,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.0",
+    name: "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18729,7 +18716,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18747,7 +18734,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.1",
+    name: "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18759,8 +18747,8 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18778,7 +18766,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.2",
+    name: "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18790,9 +18779,9 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18810,7 +18799,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.3",
+    name: "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.3",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18822,10 +18812,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18843,7 +18833,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.4",
+    name: "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.4",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18856,11 +18847,11 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.hardware.radio@1.0",
                 "android.hardware.radio@1.1",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18878,7 +18869,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.5",
+    name: "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.5",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18891,12 +18883,12 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.hardware.radio@1.0",
                 "android.hardware.radio@1.1",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18914,7 +18906,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.qtiradio@2.6",
+    name: "vendor.qti.hardware.radio.qtiradio@2.6_vendor",
+    stem: "vendor.qti.hardware.radio.qtiradio@2.6",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18926,13 +18919,13 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.radio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.qtiradio@2.0",
-                "vendor.qti.hardware.radio.qtiradio@2.1",
-                "vendor.qti.hardware.radio.qtiradio@2.2",
-                "vendor.qti.hardware.radio.qtiradio@2.3",
-                "vendor.qti.hardware.radio.qtiradio@2.4",
-                "vendor.qti.hardware.radio.qtiradio@2.5",
+                "vendor.qti.hardware.radio.qtiradio@1.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.0_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.1_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.2_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.3_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.4_vendor",
+                "vendor.qti.hardware.radio.qtiradio@2.5_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -18950,7 +18943,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.0",
+    name: "vendor.qti.hardware.radio.uim@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18978,7 +18972,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.1",
+    name: "vendor.qti.hardware.radio.uim@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -18989,7 +18984,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim@1.0",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19007,7 +19002,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim@1.2",
+    name: "vendor.qti.hardware.radio.uim@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.uim@1.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19018,8 +19014,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim@1.0",
-                "vendor.qti.hardware.radio.uim@1.1",
+                "vendor.qti.hardware.radio.uim@1.0_vendor",
+                "vendor.qti.hardware.radio.uim@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19037,7 +19033,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.0",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19065,7 +19062,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.1",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19076,7 +19074,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19094,7 +19092,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_client@1.2",
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.2_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_client@1.2",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19105,8 +19104,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.1",
+                "vendor.qti.hardware.radio.uim_remote_client@1.0_vendor",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19124,7 +19123,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.radio.uim_remote_server@1.0",
+    name: "vendor.qti.hardware.radio.uim_remote_server@1.0_vendor",
+    stem: "vendor.qti.hardware.radio.uim_remote_server@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19152,7 +19152,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.slmadapter@1.0",
+    name: "vendor.qti.hardware.slmadapter@1.0_vendor",
+    stem: "vendor.qti.hardware.slmadapter@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19208,7 +19209,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callcapability@1.0",
+    name: "vendor.qti.ims.callcapability@1.0_vendor",
+    stem: "vendor.qti.ims.callcapability@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19236,7 +19238,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0",
+    name: "vendor.qti.ims.callinfo@1.0_vendor",
+    stem: "vendor.qti.ims.callinfo@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19264,7 +19267,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.0",
+    name: "vendor.qti.ims.factory@1.0_vendor",
+    stem: "vendor.qti.ims.factory@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19275,8 +19279,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19294,7 +19298,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.1",
+    name: "vendor.qti.ims.factory@1.1_vendor",
+    stem: "vendor.qti.ims.factory@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19305,10 +19310,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.callcapability@1.0",
-                "vendor.qti.ims.factory@1.0",
-                "vendor.qti.ims.rcsconfig@2.0",
-                "vendor.qti.ims.rcsconfig@2.1",
+                "vendor.qti.ims.callcapability@1.0_vendor",
+                "vendor.qti.ims.factory@1.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
+                "vendor.qti.ims.rcsconfig@2.1_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19326,7 +19331,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.0",
+    name: "vendor.qti.ims.rcsconfig@1.0_vendor",
+    stem: "vendor.qti.ims.rcsconfig@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19354,7 +19360,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@1.1",
+    name: "vendor.qti.ims.rcsconfig@1.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@1.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19365,7 +19372,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@1.0",
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19383,7 +19390,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.0",
+    name: "vendor.qti.ims.rcsconfig@2.0_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19411,7 +19419,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.rcsconfig@2.1",
+    name: "vendor.qti.ims.rcsconfig@2.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19422,7 +19431,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.ims.rcsconfig@2.0",
+                "vendor.qti.ims.rcsconfig@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -19502,7 +19511,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latency@2.0",
+    name: "vendor.qti.latency@2.0_vendor",
+    stem: "vendor.qti.latency@2.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19530,7 +19540,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.latency@2.1",
+    name: "vendor.qti.latency@2.1_vendor",
+    stem: "vendor.qti.latency@2.1",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -19541,7 +19552,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.latency@2.1.so",
             ],
             shared_libs: [
-                "vendor.qti.latency@2.0",
+                "vendor.qti.latency@2.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -20402,17 +20413,17 @@ cc_prebuilt_binary {
                 "libqmiservices",
                 "libhidlbase",
                 "libandroid_net",
-                "vendor.qti.hardware.data.cne.internal.api@1.0",
-                "vendor.qti.hardware.data.cne.internal.constants@1.0",
-                "vendor.qti.hardware.data.cne.internal.server@1.0",
-                "vendor.qti.hardware.data.latency@1.0",
-                "vendor.qti.data.factory@2.0",
-                "vendor.qti.data.factory@2.1",
-                "vendor.qti.data.factory@2.2",
-                "vendor.qti.data.factory@2.3",
-                "vendor.qti.latency@2.0",
-                "vendor.qti.latency@2.1",
-                "vendor.qti.hardware.mwqemadapter@1.0",
+                "vendor.qti.hardware.data.cne.internal.api@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.constants@1.0_vendor",
+                "vendor.qti.hardware.data.cne.internal.server@1.0_vendor",
+                "vendor.qti.hardware.data.latency@1.0_vendor",
+                "vendor.qti.data.factory@2.0_vendor",
+                "vendor.qti.data.factory@2.1_vendor",
+                "vendor.qti.data.factory@2.2_vendor",
+                "vendor.qti.data.factory@2.3_vendor",
+                "vendor.qti.latency@2.0_vendor",
+                "vendor.qti.latency@2.1_vendor",
+                "vendor.qti.hardware.mwqemadapter@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
