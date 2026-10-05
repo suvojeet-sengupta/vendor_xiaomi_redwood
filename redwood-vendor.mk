@@ -444,11 +444,9 @@ PRODUCT_PACKAGES += \
     libqcvirt \
     vendor.qti.hardware.dsp@1.0 \
     btaudio_offload_if \
-    audio.primary.lahaina_redwood \
     sound_trigger.primary.lahaina \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     libFileMux_proprietary \
-    liba2dpoffload_redwood \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -459,16 +457,13 @@ PRODUCT_PACKAGES += \
     libaudiocloudctrl \
     libaudioparsers \
     libaudioroute_ext \
-    libbatterylistener_redwood \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
     libgcs-calwrapper \
     libgcs-ipc \
     libgcs-osal \
     libgcs \
-    libhdmiedid_redwood \
     libhdmipassthru_redwood \
-    libhfp_redwood \
     liblistensoundmodel2 \
     libmmhardware \
     libmmrtpdecoder_proprietary \
@@ -476,8 +471,6 @@ PRODUCT_PACKAGES += \
     libmulawdec \
     libqtigef \
     libresampler \
-    libsndmonitor_redwood \
-    libssrec_redwood \
     libvideoNS \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
