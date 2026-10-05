@@ -2090,8 +2090,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-}
-
 cc_prebuilt_library_shared {
     name: "sound_trigger.primary.lahaina",
     owner: "xiaomi",
@@ -2185,8 +2183,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "32",
     prefer: true,
     soc_specific: true,
-}
-
 }
 
 cc_prebuilt_library_shared {
@@ -2470,8 +2466,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-}
-
 cc_prebuilt_library_shared {
     name: "libbluetooth_audio_session_qti",
     owner: "xiaomi",
@@ -2644,8 +2638,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-}
-
 cc_prebuilt_library_shared {
     name: "libhdmipassthru_redwood",
     stem: "libhdmipassthru",
@@ -2681,8 +2673,6 @@ cc_prebuilt_library_shared {
         "libhdmipassthru",
     ],
     soc_specific: true,
-}
-
 }
 
 cc_prebuilt_library_shared {
@@ -2871,10 +2861,6 @@ cc_prebuilt_library_shared {
     compile_multilib: "32",
     prefer: true,
     soc_specific: true,
-}
-
-}
-
 }
 
 cc_prebuilt_library_shared {
