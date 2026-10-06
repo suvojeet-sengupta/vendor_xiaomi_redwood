@@ -152,7 +152,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
-    vendor/xiaomi/redwood/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/xiaomi/redwood/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
@@ -880,9 +879,6 @@ PRODUCT_PACKAGES += \
     sensors.mius.proximity \
     sensors.ssc \
     sensors.touch.detect \
-    unnhal-acc-common \
-    unnhal-acc-gpu \
-    unnhal-acc-htp \
     vendor.qti.data.factory@2.0_vendor \
     vendor.qti.data.factory@2.1_vendor \
     vendor.qti.data.factory@2.2_vendor \
@@ -1010,7 +1006,6 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     QtiTelephonyService \
     com.android.hotwordenrollment.common.util \
-    android.hardware.neuralnetworks@1.3-service-qti.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
     vendor.qti.diag.hal.service.xml \
@@ -1028,7 +1023,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.keymaster@4.1-service-qti \
-    android.hardware.neuralnetworks@1.3-service-qti \
     qcrilNrd \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \

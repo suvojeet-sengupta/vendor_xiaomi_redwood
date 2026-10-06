@@ -17094,109 +17094,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "unnhal-acc-common",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/unnhal-acc-common.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libhardware",
-                "libhidlbase",
-                "libhidlmemory",
-                "libui",
-                "liblog",
-                "libnativewindow",
-                "libutils",
-                "libcutils",
-                "libfmq",
-                "android.hardware.neuralnetworks@1.0",
-                "android.hardware.neuralnetworks@1.1",
-                "android.hardware.neuralnetworks@1.2",
-                "android.hardware.neuralnetworks@1.3",
-                "android.hidl.safe_union@1.0",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "unnhal-acc-gpu",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/unnhal-acc-gpu.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "unnhal-acc-htp",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/unnhal-acc-htp.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libhardware",
-                "libhidlbase",
-                "libhidlmemory",
-                "libhidltransport",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libcdsprpc",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libQnnHtpAltPrepStub",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.data.factory@2.0_vendor",
     stem: "vendor.qti.data.factory@2.0",
     owner: "xiaomi",
@@ -19987,15 +19884,6 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.neuralnetworks@1.3-service-qti.xml",
-    owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "manifest_android.hardware.drm@1.3-service.widevine.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
@@ -20446,49 +20334,6 @@ cc_prebuilt_binary {
                 "android.hardware.keymaster@4.1",
                 "libqtikeymaster4",
                 "libcrypto",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.neuralnetworks@1.3-service-qti",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti",
-            ],
-            shared_libs: [
-                "libbase",
-                "libhardware",
-                "libhidlbase",
-                "libhidlmemory",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libfmq",
-                "libui",
-                "android.hardware.neuralnetworks@1.0",
-                "android.hardware.neuralnetworks@1.1",
-                "android.hardware.neuralnetworks@1.2",
-                "android.hardware.neuralnetworks@1.3",
-                "android.hidl.safe_union@1.0",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libprotobuf-cpp-full-3.9.1-vendorcompat",
-                "libsync",
                 "libc++",
                 "libc",
                 "libm",
