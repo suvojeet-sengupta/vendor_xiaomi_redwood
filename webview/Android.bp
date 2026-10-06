@@ -1,0 +1,42 @@
+//
+// SPDX-FileCopyrightText: 2026 Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Google WebView and Trichrome with 32 and 64 bit libraries, as stubs over the
+// compressed APKs like on Pixels, so Play Store can update them. The module
+// names differ from the GMS packages that ship the same APKs.
+
+android_app_import {
+    name: "redwood_TrichromeLibrary-Stub",
+    owner: "google",
+    apk: "proprietary/product/app/TrichromeLibrary-Stub/TrichromeLibrary-Stub.apk",
+    filename: "TrichromeLibrary-Stub.apk",
+    relative_install_path: "TrichromeLibrary-Stub",
+    install_path_skip_module_dir: true,
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "redwood_WebViewGoogle-Stub",
+    owner: "google",
+    apk: "proprietary/product/app/WebViewGoogle-Stub/WebViewGoogle-Stub.apk",
+    filename: "WebViewGoogle-Stub.apk",
+    relative_install_path: "WebViewGoogle-Stub",
+    install_path_skip_module_dir: true,
+    overrides: [
+        "webview",
+        "WebViewGoogle64",
+    ],
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
