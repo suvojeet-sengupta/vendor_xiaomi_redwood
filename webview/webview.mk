@@ -7,6 +7,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/redwood/webview/proprietary/product/app/TrichromeLibrary/TrichromeLibrary.apk.gz:$(TARGET_COPY_OUT_PRODUCT)/app/TrichromeLibrary/TrichromeLibrary.apk.gz \
     vendor/xiaomi/redwood/webview/proprietary/product/app/WebViewGoogle/WebViewGoogle.apk.gz:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/WebViewGoogle.apk.gz
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi/redwood/webview
+
 PRODUCT_PACKAGES += \
-    redwood_TrichromeLibrary-Stub \
-    redwood_WebViewGoogle-Stub
+    TrichromeLibrary-Stub \
+    WebViewGoogle-Stub
