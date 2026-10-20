@@ -1255,7 +1255,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidlmemory",
                 "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
+                "vendor.qti.qspmhal@1.0_egl",
                 "libdl",
                 "libz",
                 "liblog",
