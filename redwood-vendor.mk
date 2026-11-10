@@ -1034,7 +1034,7 @@ PRODUCT_PACKAGES += \
     IWlanService \
     SoterService \
     TimeService \
-    HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
+    HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     QtiTelephonyService \
     com.android.hotwordenrollment.common.util \
